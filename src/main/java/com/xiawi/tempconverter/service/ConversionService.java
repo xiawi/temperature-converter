@@ -15,7 +15,7 @@ public class ConversionService {
         return new Temperature(convertedValue, targetUnit);
     }
 
-    public double toCelsius(Temperature source) {
+    private double toCelsius(Temperature source) {
         return switch (source.unit()) {
             case CELSIUS -> source.value();
             case FAHRENHEIT -> (source.value() + 32) * 5 / 9;
@@ -23,7 +23,7 @@ public class ConversionService {
         };
     }
 
-    public double fromCelsius(double source, Unit targetUnit)
+    private double fromCelsius(double source, Unit targetUnit)
     {
         return switch (targetUnit) {
             case CELSIUS -> source;
