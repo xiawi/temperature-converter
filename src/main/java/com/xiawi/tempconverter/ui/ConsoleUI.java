@@ -59,7 +59,7 @@ public class ConsoleUI
         converted = conversionService.convert(source, targetUnit);
         record = new ConversionRecord(source, converted, Instant.now());
         historyRepository.addRecord(record);
-        System.out.println("Result: " + converted.value() + converted.unit());
+        System.out.println("Result: " + converted.value() + converted.unit().symbol());
     }
 
     private void showHistory() {
@@ -77,8 +77,8 @@ public class ConsoleUI
     }
 
     private String formatRecord(ConversionRecord record) {
-        return record.timestamp() + " | " + record.source().value() + record.source().unit()
-                + "→" + record.converted().value() + record.converted().unit();
+        return record.timestamp() + " | " + record.source().value() + record.source().unit().symbol()
+                + " → " + record.converted().value() + record.converted().unit().symbol();
     }
 
     private void clearHistory() {
