@@ -46,7 +46,7 @@ public class InputHandler {
             System.out.println(prompt);
             input = scanner.nextLine();
             try {
-                return Double.parseDouble(prompt);
+                return Double.parseDouble(input);
             } catch (NumberFormatException e) {
                 System.out.println("Invalid number. Try again.");
             }
