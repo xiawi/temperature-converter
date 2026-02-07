@@ -22,13 +22,13 @@ This project follows a clean Java structure:
 1. Make sure you have Java JDK 21+ installed.
 2. Compile the code:
     ```bash
-        # From root directory
-        mkdir -p out
-        javac -d out $(find src/main/java -name "*.java")
+    # From root directory
+    mkdir -p out
+    javac -d out $(find src/main/java -name "*.java")
     ```
 3. Run the program:
     ```bash
-        java -cp out com.xiawi.tempconverter.Main
+    java -cp out com.xiawi.tempconverter.Main
     ```
 
 ## File Structure
